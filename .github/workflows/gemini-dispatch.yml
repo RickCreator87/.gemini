@@ -1,0 +1,19 @@
+name: Gemini Workflow Dispatch
+# Author: RickCreator87
+# Codeowner: GitDigital Solana
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issues:
+    types: [opened]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Gemini CLI
+        uses: google-github-actions/run-gemini-cli@main
+        with:
+          api_key: ${{ secrets.GEMINI_API_KEY }}
+
