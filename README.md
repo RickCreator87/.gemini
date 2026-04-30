@@ -1,0 +1,2 @@
+# .gemini
+My Gemini Folder 📂 
