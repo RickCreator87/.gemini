@@ -1,2 +1,10 @@
 # .gemini
 My Gemini Folder 📂 
+version: "1.0"
+repository: "GitDigital-Solana/zk-authorship-license"
+codeowner: "GitDigital Solana"
+author: "RickCreator87"
+guidelines:
+  - Verify adherence to Zero-Knowledge (ZK) proofs, local-first architecture, and AltBn128 pre-compiles.
+  - Validate Rust modules in commands/ and zk-logic paths.
+  - Confirm security for on-chain state transitions without leaking private keys or witness data.
