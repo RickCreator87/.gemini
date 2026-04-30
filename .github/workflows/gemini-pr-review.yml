@@ -1,0 +1,25 @@
+name: Gemini PR Review
+# Author: RickCreator87
+# Codeowner: GitDigital Solana
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Gemini PR Review
+        uses: google-github-actions/run-gemini-cli@main
+        with:
+          api_key: ${{ secrets.GEMINI_API_KEY }}
+          command: 'review'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
